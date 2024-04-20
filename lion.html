@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="C:\Users\Dell\Pictures\website logo na c0f96948-6385-4cab-9ac7-0ab7f4d9e04f.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <title>Mufasa: The Lion King - Trailer</title>
+    <style>
+        body {
+            background-color: black;
+            margin: 0;
+            padding: 0;
+        }
+        .box-img {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .box-img video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .popup-title {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            z-index: 9999;
+            display: none;
+            font-family: 'Poppins', sans-serif;
+        }
+        .back-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            z-index: 999;
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            display: none;
+        }
+        .box-img:hover .back-button {
+            display: block; 
+        }
+    </style>
+</head>
+<body>
+    <div class="box-img">
+        <video controls autoplay allowfullscreen>
+            <source src="./movie/MUFASA_ The Lion King – FIRST TRAILER (2024) Disney(720P_HD).mp4">
+        </video>
+        <a href="index.html" class="back-button"><i class='bx bx-left-arrow-alt'></i></a>
+    </div> 
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var popupTitle = document.createElement("div");
+            popupTitle.className = "popup-title";
+            popupTitle.textContent = "Mufasa: The Lion King";
+            document.body.appendChild(popupTitle);
+            popupTitle.style.display = "block";
+            setTimeout(function() {
+                popupTitle.style.display = "none";
+            }, 10000);
+        });
+    </script>
+</body>
+</html>
